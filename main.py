@@ -36,8 +36,8 @@ class Particle:
         self.radius = size / 2
         self.mass = self.density * PI * (self.radius ** 2)
 
-        self.surfWhite = pg.transform.scale(pg.image.load('pythonProject\\particleWhite.png'), (size, size))
-        self.surfRed = pg.transform.scale(pg.image.load('pythonProject\\particleRed.png'), (size, size))
+        self.surfWhite = pg.transform.scale(pg.image.load('particleWhite.png'), (size, size))
+        self.surfRed = pg.transform.scale(pg.image.load('particleRed.png'), (size, size))
 
         if pos: self.pos = np.array((pos[0] - self.radius, pos[1] - self.radius), np.float64)
         else: self.pos = np.array((np.random.random() * (WINDOW_WIDTH - size + 1), np.random.random() * (WINDOW_HEIGHT - size + 1)),
